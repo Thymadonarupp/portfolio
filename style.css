@@ -1,0 +1,139 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+/* Set core body defaults */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellow;
+  padding: 0 4em;
+  height: 70px;
+}
+
+.nav-icon img{
+  max-width: 70px;
+  object-fit: cover;
+}
+.nav-items {
+  display: flex;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.nav-link {
+  text-decoration: none;
+  padding-left: 3em;
+  color: black;
+}
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+}
+.intro-text h1{
+  font-weight: 400;
+  font-size: 3rem;
+}
+.intro-text span{
+  display: inline-block;
+  font-weight: 800;
+}
+.intro-text p {
+  margin-top: 2em;
+  font-weight: 400;
+  letter-spacing: normal;
+  font-size: 1.5rem;
+  padding: 50px 30px;
+}
+
+.intro-button a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: yellow;
+  padding: 20px 35px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  font-weight: 800;
+  color: black;
+  margin: 20px 0;
+}
+.intro-button a:hover {
+  color: white;
+  background-color: black;
+}
+.intro-social-media {
+  display: flex;
+  margin-top: 3em;
+}
+
+
+.intro-profile img {
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: 400px;
+}
+
+.social-icon {
+  max-width: 2em;
+  margin-right: 4em;
+}
+
+@media screen and (max-width: 800px){
+  .contents {
+    display: flex;
+    flex-direction: column;
+  }
+}
